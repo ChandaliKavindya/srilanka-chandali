@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sri Lanka Beautiful Places</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: #f9fafb;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav h1 {
+      color: #fff;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url("https://ignitetravelsolution.com/wp-content/uploads/2025/01/Sri-Lanka-World-Heritage.jpg") center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 1.5s ease;
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 20px;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section */
+    section {
+      padding: 100px 50px;
+    }
+    section h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* Cards */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .card-content h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .card-content p {
+      font-size: 15px;
+      line-height: 1.5;
+      max-height: 60px;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    .card-content.expanded p {
+      max-height: 500px;
+    }
+    .see-more {
+      display: inline-block;
+      margin-top: 10px;
+      background: #0077b6;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .see-more:hover {
+      background: #023e8a;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #bbb;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Sri Lanka</h1>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#places">Places</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h2>Welcome to Sri Lanka</h2>
+      <p>Discover the most beautiful and famous places of the island paradise.</p>
+    </div>
+  </section>
+
+  <!-- Famous Places Section -->
+  <section id="places">
+    <h2>Beautiful Places</h2>
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.nUugvfyZDnqJ8_J3QgTf8wHaE7?r=0&cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sigiriya">
+        <div class="card-content">
+          <h3>Sigiriya</h3>
+          <p>Sigiriya, also known as Lion Rock, is an ancient rock fortress and a UNESCO World Heritage Site. It is one of the most iconic landmarks in Sri Lanka, offering stunning views and incredible history.</p>
+          <span class="see-more">See More</span>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://do6raq9h04ex.cloudfront.net/sites/8/2021/07/galle-fort-1050x700-1.jpg" alt="Galle Fort">
+        <div class="card-content">
+          <h3>Galle Fort</h3>
+          <p>Built by the Portuguese in the 16th century and fortified by the Dutch, Galle Fort is a living heritage site filled with charming streets, colonial architecture, and vibrant culture.</p>
+          <span class="see-more">See More</span>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlRA-zKpEcOLTqtpL2-EJf4u_0xlFT4E5fvQ&s" alt="Ella">
+        <div class="card-content">
+          <h3>Ella</h3>
+          <p>Ella is a small town in the Badulla District known for its breathtaking views of lush green hills, tea plantations, and the famous Nine Arches Bridge.</p>
+          <span class="see-more">See More</span>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="https://www.wondersofceylon.com/content/images/2023/02/temple-g9e39dd8c2_1920.jpg" alt="Temple of the Tooth">
+        <div class="card-content">
+          <h3>Temple of the Tooth</h3>
+          <p>Located in Kandy, the Temple of the Sacred Tooth Relic is one of the most sacred Buddhist temples in the world, housing the relic of the tooth of the Buddha.</p>
+          <span class="see-more">See More</span>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Nuwara-Eliya.jpg" alt="Nuwara Eliya">
+        <div class="card-content">
+          <h3>Nuwara Eliya</h3>
+          <p>Known as "Little England," Nuwara Eliya is famous for its cool climate, tea plantations, and colonial-era bungalows nestled in the hills.</p>
+          <span class="see-more">See More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sri Lanka Beautiful Places | Designed with Chandali ❤️</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.see-more');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.parentElement;
+        content.classList.toggle('expanded');
+        button.textContent = content.classList.contains('expanded') ? 'See Less' : 'See More';
+      });
+    });
+  </script>
+</body>
+</html>
